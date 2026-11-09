@@ -2,7 +2,7 @@ manifestVersion: 1
 id: serum-sokjan
 category: networking
 name: Sokjan
-version: "0.3.0"
+version: "0.3.1"
 tagline: Fast, lightweight DHT crawler with Torznab for Sonarr and Radarr
 description: >-
   Sokjan crawls the BitTorrent DHT, stores torrent metadata in a single SQLite file,
@@ -22,7 +22,7 @@ support: https://github.com/serumtoxin/sokjan/issues
 port: 7650
 gallery: []
 dependencies: []
-releaseNotes: "Faster crawling: popular and announced torrents are fetched first, dead peers are dropped sooner. Lower memory use. Retention now trims stored file lists when the limit is lowered. Memory breakdown on the Crawler page."
+releaseNotes: "Fix: deleting or pruning torrents now actually shrinks the database file. Faster crawling with popular-first fetching, lower memory, file-list trimming."
 path: ""
 defaultUsername: ""
 defaultPassword: ""
