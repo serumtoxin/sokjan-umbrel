@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: serum-sokjan
+category: networking
+name: Sokjan
+version: "0.2.0"
+tagline: Fast, lightweight DHT crawler with Torznab for Sonarr and Radarr
+description: >-
+  Sokjan crawls the BitTorrent DHT, stores torrent metadata in a single SQLite file,
+  and serves it through a web manager and a Torznab API.
+  You control exactly what gets saved (categories, size, keywords, regex) and how long
+  it is kept (max size, max count, prune torrents no longer seen on the DHT).
+
+
+  Add it to Sonarr/Radarr/Prowlarr as a Generic Torznab indexer:
+  URL http://umbrel.local:7650/torznab, API path /api.
+developer: serum
+website: https://github.com/serumtoxin/sokjan
+submitter: serum
+submission: https://github.com/serumtoxin/sokjan
+repo: https://github.com/serumtoxin/sokjan
+support: https://github.com/serumtoxin/sokjan/issues
+port: 7650
+gallery: []
+dependencies: []
+releaseNotes: "Redesigned web manager, junk-release filter, rule tester, torrent details, throughput charts, blocklist viewer, warm restarts."
+path: ""
+defaultUsername: ""
+defaultPassword: ""

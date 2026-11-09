@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: serum-sokjan_web_1
+      APP_PORT: 7650
+      # Sonarr/Radarr/Prowlarr can't log in to Umbrel, so let Torznab through.
+      PROXY_AUTH_WHITELIST: "/torznab/*"
+
+  web:
+    image: ghcr.io/serumtoxin/sokjan:latest
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 30s
+    ports:
+      - "7651:7651/udp"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      RUST_LOG: info
+      SOKJAN_DB: /data/sokjan.db
+    ulimits:
+      nofile: { soft: 65536, hard: 65536 }
