@@ -2,7 +2,7 @@ manifestVersion: 1
 id: serum-sokjan
 category: networking
 name: Sokjan
-version: "0.5.3"
+version: "0.5.4"
 tagline: Fast, lightweight DHT crawler with Torznab for Sonarr and Radarr
 description: >-
   Sokjan crawls the BitTorrent DHT, stores torrent metadata in a single SQLite file,
